@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Films</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:wght@400;700">
+    </head>
+    <body class="bodyF">
+        <header>
+            <!-- nav bar -->
+            <nav class="navbar nav justify-content-center">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="quotes.html">Quotes</a>
+                <a class="nav-link" href="paintings.html">Paintings</a>
+                <a class="nav-link" href="albums.html">Albums</a>
+                <a class="nav-link active" href="films.html">Films</a>
+            </nav>
+        </header>
+
+<body class="bodyF">
+  <div class="wrapper">
+<!-- Sidebar -->
+    <nav id="sidebar">
+      <ul class="list-unstyled components">
+        <p class="space"></p>
+        <li>
+          <a id="film_0" onclick="change_filmInfo(0)">La La Land</a>
+        </li>
+        <li>
+          <a id="film_1" onclick="change_filmInfo(1)">Le Samouraï</a>
+        </li>
+        <li>
+          <a id="film_2" onclick="change_filmInfo(2)">Edge of Tomorrow</a>
+        </li>
+        <li>
+          <a id="film_3" onclick="change_filmInfo(3)">Her</a>
+        </li>
+        <li>
+          <a id="film_4" onclick="change_filmInfo(4)">Interstellar</a>
+        </li>
+        <li>
+          <a id="film_5" onclick="change_filmInfo(5)">Pride & Prejudice</a>
+        </li>
+        <li>
+          <a id="film_6" onclick="change_filmInfo(6)">Black Swan</a>
+        </li>
+        <li>
+          <a id="film_7" onclick="change_filmInfo(7)">Moulin Rouge!</a>
+        </li>
+        <li>
+          <a id="film_8" onclick="change_filmInfo(8)">La leggenda del pianista sull'oceano</a>
+        </li>
+        <li>
+          <a id="film_9" onclick="change_filmInfo(9)">Scott Pilgrim vs. the World</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+<!-- sidebar toggle button -->
+    <button type="button" id="sidebar_toggle" class="btn btn-danger" onclick="hide_show()">
+      <i class="fas fa-align-left"></i>
+      <span>Hide/Show</span>
+    </button>
+
+<!-- card with info -->
+<div class="film_container" id="film_container">
+  <div class="card film_card">
+    <div class="box film_box">
+      <h2 class="movie_title" id="movie_title"></h2>
+      <p class="year" id="year"></p>
+      <h4 class="tagline" id="tagline"></h4>
+      <p class="director" id="director"></p>
+      <p class="storyline" id="storyline"></p>
+      <p class="genres" id="genres"></p>
+    </div>
+  </div>
+</div>
+</body>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="homepage.js"></script>
+    </body>
+</html>

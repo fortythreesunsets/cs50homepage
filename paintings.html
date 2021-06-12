@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Paintings I like</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:wght@400;700">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar nav justify-content-center">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="quotes.html">Quotes</a>
+                <a class="nav-link active" href="paintings.html">Paintings</a>
+                <a class="nav-link" href="albums.html">Albums</a>
+                <a class="nav-link" href="films.html">Films</a>
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="gallery">
+                <figure class="gallery_item gallery_item-1" onclick="change_paintingInfo(0)">
+                    <img class="gallery_img" src="https://lh3.googleusercontent.com/__3CWH4S5kkYTluyfCBxe6hbjanm80aCtHU5y6d3yIV9qkU41wwfHWOSbu_IDixnkH_QsjzELzeG1yn8xBOQwIDToL36X-mJy0QAXbuKUK9R1H3qm1u3xlxqKwjZYFfArghN8WzsxQ=w2400" alt="Fallen Angel">
+                </figure>
+
+                <figure class="gallery_item gallery_item-2" onclick="change_paintingInfo(1)">
+                    <img class="gallery_img" src="https://lh3.googleusercontent.com/bxnlaIemAQsF1Eiek5mA47gPxX7-nEyocbKr4XLdBDU2dNNEr-91uuMW_QxSPy1ijj4LetG9tsGZvhFTzDmLSoyRtuqZk434uKzhnHzTsTfeKGXSG-XiuMyuEtVzMEH5APQ3ST1jEQ=w2400" alt="The House on the Bridge">
+                </figure>
+
+                <figure class="gallery_item gallery_item-3" onclick="change_paintingInfo(2)">
+                    <img class="gallery_img" src="https://lh3.googleusercontent.com/_ySe3Dw0sP7Z9wu6jjYAHhDlSFahvdzFk4MJZq8lpQe3-KzYSprG2MZN-uVmmWCuSmYYGHGDNi-rQikX0UIIzlIvni543I_S7dT-bjORjzLR6vISWj6zvP1rGkGVPeUGP7vB41DwIg=w2400" alt="Wanderer above the Sea of Fog">
+                </figure>
+
+                <figure class="gallery_item gallery_item-4" onclick="change_paintingInfo(3)">
+                    <img class="gallery_img" src="https://lh3.googleusercontent.com/whkEhFQpO6GGj3uHzYTleqG7D6WU9OsaUCL6-EViT6wMIql6gp-3ET72MdPRNq_J5YYbYNGQASV4b7aPdH633OB390IH5p5LhMgCQgbHwligQHknEV3ThGE38z7tuss4I-NwGwU1PA=w2400" alt="The Red Wave">
+                </figure>
+
+                <figure class="gallery_item gallery_item-5" onclick="change_paintingInfo(4)">
+                    <img class="gallery_img" src="https://lh3.googleusercontent.com/h12s2qHjJVuORtYkEzlFveVZGNmISG8vyst5beTThRrrMZk1g-TsXmGxV_3as6mRYV5WZptrU0nggufHKYYPGP40L4U5cZuxZOH40l_f3qIvEH3dMI8HmHB97Cxk3lTSmLpgH2QqJg=w2400" alt="Beach Study">
+                </figure>
+
+                <figure class="gallery_item gallery_item-6" onclick="change_paintingInfo(5)">
+                    <img class="gallery_img" src="https://lh3.googleusercontent.com/KZoSIBdrm9Hj_Vr2P8mAcSsh84a33oXFufk2BIPaebUpi-JSjAF6W1_iNf_50gLG565bPrfX79p8lb_kYdvl6N38gVDp-w9f2FCRutwYSZ-RgU3y_GZbel2TuSIk2JdxNQSPIQapxQ=w2400" alt="The Lament for Icarus">
+                </figure>
+
+                <figure class="gallery_item gallery_item-7" onclick="change_paintingInfo(6)">
+                    <img class="gallery_img" src="https://lh3.googleusercontent.com/9-vCoFcWZotD_idiaPO30ZL8mfHwNpqkXJL6WXQN5wI0L25k3aTGAfSU96Emjna7_V8JLC0rEvBdN-qL5YuIiO5tVv9ruqFmFBD-92yfESHG7fiB8aHVE2kL6ife1yrZJGQOGHUFgw=w2400" alt="Nighthawks">
+                </figure>
+
+                <figure class="gallery_item gallery_item-8" onclick="change_paintingInfo(7)">
+                    <img class="gallery_img" src="https://lh3.googleusercontent.com/jNk-SvCtv5LFKaL4_BTJnONBOaiByh9r7yGbu8Xu0EnK_UbIPm4pQw173CSESE73Nn5fAtXxNEtCXPutTCZrJaBu7NtP7Qnr-Me7qa3slCGIxqhb7StDF5GMpRM1MDg6OXLdbTCPiw=w2400" alt="Café at night">
+                </figure>
+
+                <figure class="gallery_item gallery_item-9" onclick="change_paintingInfo(8)">
+                    <img class="gallery_img" src="https://lh3.googleusercontent.com/glblnaigslN35YtAZP9s6gaDlYSKxUQ_fVpgFYzkrQKubnr72Ki3QegRP8yAkE_wv6vFwgut_QmQA5b-P9lCfB3w7edUsTVfl7ZSo4whRm7Cye-THljLNP91KV3knAVv4ctRTK-gVA=w2400" alt="The Dead Flower">
+                </figure>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h4 id="painting_title"></h4>
+            <p id="painting_info"></p>
+            <p id="painting_style"></p>
+        </div>
+
+        <script src="homepage.js"></script>
+    </body>
+</html>

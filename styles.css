@@ -1,0 +1,635 @@
+/*                       /
+/        INDEX           /
+/                       */
+
+/*set background image*/
+.index {
+    background-image: url("https://lh3.googleusercontent.com/NC33ZKbsR99JhfmQ3fy_FhImcGh_PzPNpXAn6cGAFmcVbzPrHz2T7mYOJG9Fjw1X36qxh65IfzaaWkvnPq_DUXHl1ppmBLMhga6nzYL7CYc-GR3crSABpPskm-9wmMAWxglUDhXQAA=w2400");
+	  background-size: auto;
+}
+
+/*                       /
+/        NAVBAR          /
+/                       */
+.navbar {
+    background-color: #000;
+    z-index:1;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: 'Nunito';
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+  color: red;
+}
+
+.active {
+  background-color: red;
+}
+
+/*placing images*/
+.car {
+    float: left;
+    position: absolute;
+    margin: 350px 0px 0px -800px;
+    width: 35%;
+    animation: float 4s 5s infinite;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.paintings {
+    float: right;
+    position: absolute;
+    margin: 90px 0px 0px -600px;
+    width: 60%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.lamp_post {
+    float: right;
+    position: absolute;
+    margin: 120px 0px 0px -180px;
+    width: 5%;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.light {
+  height: 60px;
+  width: 60px;
+  margin: 170px -170px;
+  background-image: radial-gradient(ellipse at center, rgba(255,255,0,1) 0%, rgba(255,255,122,1) 40%, rgba(255,255,153,0.96) 50%, rgba(255,255,255,0.75) 100%);
+  border-radius: 50%;
+  display: inline-block;
+  animation: flicker 4s linear infinite;
+  cursor: pointer;
+  z-index: 0;
+}
+
+.man {
+    position: absolute;
+    margin: 120px 0px 0px 200px;
+    width: 20%;
+    display: inline-block;
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 4s;
+    cursor: pointer;
+}
+
+.name {
+  float: left;
+  position: absolute;
+  margin: 480px 0px 0px -750px;
+  width: 60%;
+  z-index: 2;    /* so it can be above the other images*/
+  cursor: pointer;
+}
+
+/*
+.title {
+    transform: translateX(-50%) rotate(-10deg) skew(-10deg);
+    display: block;
+    float: left;
+    left: 50%;
+    position: relative;
+}
+*/
+.moon {
+    float: left;
+    margin: 50px 0px 0px 350px;
+    width: 40%;
+    /* drop-shadow(offset-x offset-y blur-radius color) x = horizontal distance  y = vertical distance*/
+    filter: drop-shadow(0 0 3rem rgb(83,108,184));
+}
+
+/*animations*/
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(15deg);}
+}
+
+@keyframes float {
+	0% {transform: translatey(0px);}
+	50% {transform: translatey(-10px);}
+	100% {transform: translatey(0px);}
+}
+
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: .99;
+		text-shadow: -1px -1px 0 $outline, 1px -1px 0 $outline, -1px 1px 0 $outline, 1px 1px 0 $outline, 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00, 0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
+	}
+	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+		opacity: 0.4;
+		text-shadow: none;
+	}
+}
+
+/*hover effect*/
+.car:hover {
+  transform: scale(1.1);
+}
+
+.paintings:hover {
+  transform: scale(1.1);
+}
+
+.lamp_post:hover {
+  filter: drop-shadow(0 0 3rem rgb(255,255,0, 0.80));
+}
+
+.man:hover {
+  transform: scale(1.1);
+}
+
+.name:hover {
+  filter: drop-shadow(0 0 3rem rgb(50,0,255, 1));
+}
+/*                       /
+/        QUOTES          /
+/                       */
+.image_panel, .books_container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 60%;
+}
+
+/*top panel*/
+.image_panel {
+    top: 0;
+    background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1153&q=80');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    transition: .6s ease-in;
+}
+
+.quote {
+    font-family: 'Tangerine';
+    color: white;
+    font-size: 45px;
+    padding-top: 150px;
+    text-align: center;
+}
+.info {
+    font-family: 'Nunito';
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+/*bottom panel*/
+.books_container {
+    bottom: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* '#' to use the id instead of the class*/
+#book_card {
+    z-index: 1;
+    left: 100px;
+    top: 100px;
+    position: relative;
+    width: 120px;
+    height: 190px;
+    margin: 7px;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  cursor: pointer;
+}
+
+/*images of books*/
+.book1 {
+    background-image: url('https://lh3.googleusercontent.com/OuarS3K1ZoHny4RuotrIYjzyc4pgrkFW8RSVLFiVUxn9V6d58oOoDihePL8nXVzq-m2qB9yqD9fXCLAQqMz_Gr6ulDb0V0ZeQ2UASUcHMHi_4vJmpOAHX5dGkLBzPZu-tQ61revB5w=w2400');
+}
+
+.book2 {
+    background-image: url('https://lh3.googleusercontent.com/vnzR-hE6jQOgVr-nLDNC18ndDTfyFEcPq0CLgRbJMSm1Ktwb0dAyi7thtJa4vg770mZrDPBJvUkxxj-dD6k8ANVaDm1O92vav7BWMsURudrAGZalFrn2cW89bXsjDvIsuHxsW3jwSg=w2400');
+}
+
+.book3 {
+    background-image: url('https://lh3.googleusercontent.com/xubLY5k1dKXHKBszgLWc2c0l7N16OZzBH2r68UWWMEAdqznL0O6AbpewsNob7G0ix0E9vEBcQoCmhk5qEtuID5jLX7bF_iN0Wrm6SfXGd9iRmGoxth0VWpxse_X3btSYv9075Sp5RA=w2400');
+}
+
+.book4 {
+    background-image: url('https://lh3.googleusercontent.com/JBgos1jmKeOCW4_MYGXo6vStaUZDklPpOLDkWX1ZNUn_nY0vYMxpsnjg68MVjou-AzHpPdTNN393oVurUU3Zp8lxeZ89fHfupyRRllYLdVvfd2fJOzUNvk9NXPb2nn8mLO70POPxgg=w2400');
+}
+
+.book5 {
+    background-image: url('https://lh3.googleusercontent.com/9RnyAIAVklDrjzwQ1vUgF02aW07fNX_L8hJnvcSxtLgZ6RCJpc9KGn9lkAuNXCQRud_SXH-KcQ5LVYcjUxFHuVJt9Vgume3bB6_PcVgV65qAbekNfkjP1fgarGzP_fxEowNMbzOmFA=w2400');
+}
+
+.book6 {
+    background-image: url('https://lh3.googleusercontent.com/YxrBFCEE3dRGXvfvSaEMt3mD-N3ptHgFuEYPb36biW_MYfbXXzHiQRR6KqFtSMvt2Z2U98T59kdCA9sntAVY5oKHzwhXtUoEv3a_0xKMWjf-wLRnEtdtWZcuLMEVoNz87qVQ75gvag=w2400');
+}
+
+.book7 {
+    background-image: url('https://lh3.googleusercontent.com/QaHrAvJOL01LgRhbsb0PtBUfKViJyw7198E9aeChZ1_yY5W1_8mgrgDF6E3Hcm2PeCTzRkP5NV75rGaRbTIu6yU4RTmKZVOvB5xAG4lbC_P--MpxCE3A30L-BIduGrD8b9tDEkaUIQ=w2400');
+}
+
+.book8 {
+    background-image: url('https://lh3.googleusercontent.com/EJjfXs5_av8NW5mnGKe8UoINisFmOssV15UbB_knS1TYetTzHE1pZMElM4fIG235JqrwBHY9y6csb1MV5-hQ-tEVy4mFYZep4eJAlFi21T-_5IjhCNHJ-FC2iV-4ZrUqEtGvg6sIZw=w2400');
+}
+
+.book9 {
+    background-image: url('https://lh3.googleusercontent.com/FLeMhUveCbGkOmaUf2VgKCa4rzDEOHxbEH0YpIFKiRaXYFIKmhMX5gZrr5ZZuTl2CcqsV3nvpsTswXRhtZJsAXHK-nXDcy8SBo5z1q6hhQS2s9ci0mF2i3gxdrIOu8CZrj-qmjtZMg=w2400');
+}
+
+.book10 {
+    background-image: url('https://lh3.googleusercontent.com/bcM9s0mNaN5kWIU081UHICQ0Y8P_Zk_LpPAmqKN93hGFImybld1GqCRKWfVsmHI8lpxGwOHK3lXr5SoYaQc-Mg2K_Yxeo_be00Gg__8ZM3u3NqsYcMeFSDwB8Zt6ENSoMKBJLbHefQ=w2400');
+}
+
+#book_card:hover {
+  transform: scale(1.1);
+}
+
+/*                       /
+/        PAINTINGS       /
+/                       */
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: content-box;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 5rem 12rem;
+  position: fixed;
+
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  grid-template-rows: repeat(10, 4.5vw);
+}
+
+/* styling images*/
+.gallery_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  filter: blur(5px) grayscale(100%);
+}
+
+/*accomodating images in the grid*/
+.gallery_item-1 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+.gallery_item-2 {
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+.gallery_item-3 {
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+.gallery_item-4 {
+  grid-column-start: 9;
+  grid-column-end: 14;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+.gallery_item-5 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 9;
+}
+
+.gallery_item-6 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 9;
+}
+
+.gallery_item-7 {
+  grid-column-start: 5;
+  grid-column-end: 10;
+  grid-row-start: 5;
+  grid-row-end: 9;
+}
+
+.gallery_item-8 {
+  grid-column-start: 10;
+  grid-column-end: 12;
+  grid-row-start: 5;
+  grid-row-end: 9;
+}
+
+.gallery_item-9 {
+  grid-column-start: 12;
+  grid-column-end: 14;
+  grid-row-start: 5;
+  grid-row-end: 9;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    font-family: 'Nunito';
+    color: white;
+    font-size: 12px;
+    line-height: 5px;
+    text-align: center;
+}
+
+.gallery_img:hover {
+  filter: none;
+}
+
+/*                       /
+/        ALBUMS          /
+/                       */
+.bodyA {
+  font-family: 'Nunito';
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('https://lh3.googleusercontent.com/I8lPC4lGELDqHNoX_vGEvfETx0mInnVmCQhR639QALlc-zMntRro9hbOCfgi3ePasCD-J2-P9rGiFHbhlmIxoQd3BIz7nFnh0L5ulC2YYV_3ijn9FXTt6cLJ_NB21Nga-ziTMB04IQ=w2400');/*url('https://images.unsplash.com/photo-1557105573-ebe3a7d9bfb0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1896&q=80');*/
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+
+.btn-danger {
+  margin-top: 20px;
+}
+
+.dropdown {
+  width: 180px;
+  height: 200px;
+  padding: 50px 12px 600px 10px;
+  cursor: pointer;
+}
+
+.album_container {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  min-height: 300px;
+  padding: px px 25px 650px;
+  margin-left: 650px;
+  color: white;
+  z-index:1;
+  border-style: none;
+  transition: all 0.5s ease-out;
+}
+
+.album_container {
+  background-color: black;
+  opacity: 0.8;
+}
+
+.tracklist {
+  font-family: 'Nunito';
+  font-size: 12px;
+}
+
+.album_container .box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  min-height: 300px;
+  overflow: hidden;
+  z-index: 2;
+  padding: 30px;
+  background: black;
+  transition: all 0.5s ease-in;
+}
+
+/*flip card*/
+.album_cover {
+  width: 500px;
+  height: 500px;
+  background-image: url('https://lh3.googleusercontent.com/g-jaVRYrvxBeh8qWs1vvA5RR1-8krM1X0QIEbOa8cFmJQoJfmNuL_AVdTdzzqgH6EkPnvYyaK5O3QhaN85mtgPBGqENR3_1ng7vRsH0Zk-pgeOUkD_Hoec3xkWlt81J3h6yNLaPw6g=w2400');
+  background-size: cover;
+  transition: all 0.5s ease-out;
+}
+
+.flip-card {
+  width: 500px;
+  height: 500px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.flip-card-front, .flip-card-inner {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  box-sizing: border-box;
+  color: black;
+  transform: rotateY(180deg);
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.album_title {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 170px;
+  color: white;
+}
+
+.artist, .release_year {
+    font-weight: 400;
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card:hover~.album_cover {
+  transform: rotateY(180deg);
+}
+
+.album_container .flip-card.album_box:hover,
+.album_container .flip-card.album_box:hover~.album_cover {
+  opacity: 1;
+}
+
+/*                       /
+/        FILMS           /
+/                       */
+.bodyF {
+  font-family: 'Nunito';
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1574267432644-f410f8ec2474?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80');
+  background-size: cover;
+  transition: all 0.5s ease-out;
+}
+
+/*Sidebar*/
+.wrapper {
+  display: flex;
+  width: 28%;
+  align-items: stretch; /*Items are stretched to fit the flexible container*/
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 100vh; /*vh = viewport height*/
+  background-color: black;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1rem;
+  display: block;
+  cursor: pointer;
+}
+
+#sidebar ul li a:hover {
+  background-color: red;
+  /*color: black;*/
+}
+
+.space {
+  height: 80px;
+}
+
+.hide_show {
+  margin-left: -250px;
+}
+
+.btn {
+  margin-bottom: 450px;
+  position: relative;
+}
+
+/*Film details*/
+.film_container {
+  width: 120vw;
+  min-height: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  z-index: 1;
+  margin: 5px 150px 20px -110px;
+  visibility: hidden;
+  transition: all 0.3s ease-out;
+}
+
+.film_container .box {
+  position: relative;
+  width: 25vw;
+  height: 37vh;
+  overflow: hidden;
+  z-index: 2;
+  padding: 30px;
+}
+
+.movie_title, .year {
+  display: inline;
+  line-height: 25px;
+  font-family: 'Nunito';
+}
+
+.movie_title {
+  margin: 0;
+  padding: 5px;
+}
+
+.tagline {
+  font-family: 'Nunito';
+  margin: 0;
+  padding: 5px;
+  line-height: 25px;
+  font-size: 1.2rem;
+}
+
+.director, .storyline, .genres {
+  font-family: 'Nunito';
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.film_container .film_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.4s ease-in;
+}

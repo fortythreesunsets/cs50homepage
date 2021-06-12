@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Albums</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:wght@400;700">
+    </head>
+    <body class="bodyA">
+        <header>
+            <nav class="navbar nav justify-content-center">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="quotes.html">Quotes</a>
+                <a class="nav-link" href="paintings.html">Paintings</a>
+                <a class="nav-link active" href="albums.html">Albums</a>
+                <a class="nav-link" href="films.html">Films</a>
+            </nav>
+        </header>
+
+<!-- Dropdown -->
+        <div class="dropdown">
+          <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Choose album</button>
+          <div class="dropdown-menu"id="album_dropdown" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" id="album_0" onclick="change_albumInfo(0)">Más</a>
+            <a class="dropdown-item" id="album_1" onclick="change_albumInfo(1)">Moraima</a>
+            <a class="dropdown-item" id="album_2" onclick="change_albumInfo(2)">Blurryface</a>
+            <a class="dropdown-item" id="album_3" onclick="change_albumInfo(3)">Room on the 3rd Floor</a>
+            <a class="dropdown-item" id="album_4" onclick="change_albumInfo(4)">Breakaway</a>
+            <a class="dropdown-item" id="album_5" onclick="change_albumInfo(5)">Nek</a>
+            <a class="dropdown-item" id="album_6" onclick="change_albumInfo(6)">111</a>
+            <a class="dropdown-item" id="album_7" onclick="change_albumInfo(7)">Revenge of the Crashtones!</a>
+            <a class="dropdown-item" id="album_8" onclick="change_albumInfo(8)">Still Not Getting Any</a>
+            <a class="dropdown-item" id="album_9" onclick="change_albumInfo(9)">The Smiths</a>
+          </div>
+        </div>
+
+<!-- Album tracklist -->
+        <div class="album_container">
+          <div class="card border-0" id="album_info">
+            <div class="box album_box">
+              <p class="tracklist" id="tracklist"></p>
+            </div>
+          </div>
+        </div>
+
+<!-- album cover -->
+        <div class="flip-card">
+          <div class="flip-card-inner" id="album_box">
+<!-- front -->
+            <div class="flip-card-front">
+              <div class="album_cover" id="album_cover"></div>
+            </div>
+<!-- back -->
+            <div class="flip-card-back">
+              <h2 class="album_title" id="album_title"></h2>
+              <h4 class="artist" id="artist"></h4>
+              <p class="release_year" id="year"></p>
+            </div>
+          </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="homepage.js"></script>
+    </body>
+</html>
