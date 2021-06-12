@@ -39,7 +39,8 @@
     position: absolute;
     margin: 350px 0px 0px -800px;
     width: 35%;
-    animation: float 4s 5s infinite;
+    animation: float 1s 3s infinite;
+    animation-delay: 0.5s;
     display: inline-block;
     cursor: pointer;
 }
@@ -70,14 +71,14 @@
   background-image: radial-gradient(ellipse at center, rgba(255,255,0,1) 0%, rgba(255,255,122,1) 40%, rgba(255,255,153,0.96) 50%, rgba(255,255,255,0.75) 100%);
   border-radius: 50%;
   display: inline-block;
-  animation: flicker 4s linear infinite;
+  animation: flicker 2s linear infinite;
   cursor: pointer;
   z-index: 0;
 }
 
 .man {
     position: absolute;
-    margin: 120px 0px 0px 200px;
+    margin: 150px 0px 0px 200px;
     width: 20%;
     display: inline-block;
     animation-name: rotate;
@@ -85,7 +86,7 @@
     animation-direction: alternate;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    animation-delay: 4s;
+    animation-delay: 0.5s;
     cursor: pointer;
 }
 
@@ -111,7 +112,7 @@
     float: left;
     margin: 50px 0px 0px 350px;
     width: 40%;
-    /* drop-shadow(offset-x offset-y blur-radius color) x = horizontal distance  y = vertical distance*/
+    /*drop-shadow(offset-x offset-y blur-radius color) x = horizontal distance  y = vertical distance;*/
     filter: drop-shadow(0 0 3rem rgb(83,108,184));
 }
 
